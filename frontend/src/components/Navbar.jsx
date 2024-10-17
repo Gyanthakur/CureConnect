@@ -7,7 +7,7 @@ const Navbar = () => {
 	const [token, setToken] = useState(true);
 	return (
 		<div className='flex items-center justify-between text-sm py-4 mb-5 border-b border-b-gray-400'>
-		  <img className='w-10 h-10 cursor-pointer' src={assets.logo_cure_connect}ass alt="" />
+		  <img onClick={()=>navigate('/')} className='w-10 h-10 cursor-pointer' src={assets.logo_cure_connect_red} alt="" />
 		  <ul className='hidden md:flex items-start gap-5 font-medium'>
 		    <NavLink to='/'>
 		        <li className='py-1'>HOME</li>
@@ -41,7 +41,8 @@ const Navbar = () => {
 		                </div>
 		            </div>
 		        </div>
-		        : <button onClick={()=> navigate('/login')} className='bg-primary text-white px-8 py-3 rounded-full font-light hidden md:block '>Create Account</button>
+		        : <button onClick={()=> navigate('/login')} className='bg-primary text-white px-8 py-3 rounded-full font-light  md:block '>Create Account</button>
+		        // : <button onClick={()=> navigate('/login')} className='bg-primary text-white px-8 py-3 rounded-full font-light hidden md:block '>Create Account</button>
 		    }
 		  </div>
 

@@ -6,6 +6,7 @@ import contact_image from './contact_image.png'
 import about_image from './about_image.png'
 import logo from './logo.svg'
 import logo_cure_connect from './cureconnectlogo.png'
+import logo_cure_connect_red from './cureconnectlogored.png'
 import dropdown_icon from './dropdown_icon.svg'
 import menu_icon from './menu_icon.svg'
 import cross_icon from './cross_icon.png'
@@ -45,6 +46,7 @@ export const assets = {
     group_profiles,
     logo,
     logo_cure_connect,
+    logo_cure_connect_red,
     chats_icon,
     verified_icon,
     info_icon,
