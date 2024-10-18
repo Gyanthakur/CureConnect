@@ -1,6 +1,8 @@
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/ece2611f-6ccb-4d6d-8bd8-4d62c82703b3" alt="CureConnect Logo" width="200"/>
+</p>
 
 # CureConnect
-![cureconnectlogo](https://github.com/user-attachments/assets/ece2611f-6ccb-4d6d-8bd8-4d62c82703b3)
 
 CureConnect is a healthcare appointment booking platform that connects patients with doctors. It allows users to view doctor profiles, check their availability, and book appointments in real-time.
 
