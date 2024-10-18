@@ -83,3 +83,10 @@ To run the project locally, follow these steps:
 - Payment Gateway Integration: Allow users to pay for appointments directly through the platform.
 - Reviews and Ratings: Enable patients to leave reviews and ratings for doctors after their appointments.
 - Search and Filtering: Add advanced search functionality to filter doctors by specialty, location, and ratings.
+
+
+
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/dfa3526f-f2c7-4999-879d-449aab91c674" alt="cureconnectlogored" width="200"/>
+</p>
