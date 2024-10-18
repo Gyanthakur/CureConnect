@@ -61,11 +61,17 @@ npm start
 - Browse the available time slots for the next 7 days.
 - Select a time slot and confirm your booking.
 
+## Home Page
+![image](https://github.com/user-attachments/assets/b76ef3da-6df4-4747-b51d-6db41419a5a8)
+
 
 ## Doctor Profile Page
+![image](https://github.com/user-attachments/assets/42cc2552-9d1b-45c9-8cb5-4e9cc10ea9ea)
 
 
 ## Appointment Booking Page
+![image](https://github.com/user-attachments/assets/f979cd9d-ee89-4d13-886f-621ed0ad065d)
+
 
 ## Future Enhancements
 - Payment Gateway Integration: Allow users to pay for appointments directly through the platform.
