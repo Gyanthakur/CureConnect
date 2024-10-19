@@ -1,5 +1,6 @@
 backend/.env
 admin/.env
+frontend/.env
 
 frontend/node_modules
 admin/node_modules
