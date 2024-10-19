@@ -39,7 +39,7 @@ const addDoctor = async (req, res) => {
     } catch (err) {
       return res.json({ success: false, message: 'Invalid address format!' });
     }
-
+    
     // Doctor data to save in the database
     const doctorData = {
       name,
@@ -51,6 +51,7 @@ const addDoctor = async (req, res) => {
       experience,
       about,
       fees,
+      // address: JSON.parse(address),
       address: parsedAddress,
       date: Date.now(),
     };
