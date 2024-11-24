@@ -68,7 +68,8 @@ To run the project locally, follow these steps:
 
 ## Home Page
 
-![image](https://github.com/user-attachments/assets/b76ef3da-6df4-4747-b51d-6db41419a5a8)
+![image](https://github.com/user-attachments/assets/4de10b8d-9121-48cc-9454-3bd3b31d01fc)
+
 
 ## Top Doctors Page
 
