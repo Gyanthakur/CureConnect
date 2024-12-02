@@ -1,6 +1,3 @@
-
-
-
 import React, { useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { AppContext } from "../context/AppContext";
@@ -22,9 +19,7 @@ const Appointments = () => {
 	const [slotIndex, setSlotIndex] = useState(0);
 	const [slotTime, setSlotTime] = useState();
 
-
-
-		const fetchDocInfo = () => {
+	const fetchDocInfo = () => {
 		const docInfo = doctors.find((doc) => doc._id === docId);
 		setDocInfo(docInfo || null);
 	};
@@ -55,26 +50,25 @@ const Appointments = () => {
 					minute: "2-digit",
 				});
 
-        let day = currDate.getDate()
-        let month = currDate.getMonth()+1;
-        let year = currDate.getFullYear()
+				let day = currDate.getDate();
+				let month = currDate.getMonth() + 1;
+				let year = currDate.getFullYear();
 
-        const slotDate = day + "_" + month + "_" + year;
-        const slotTime = formattedTime
+				const slotDate = day + "_" + month + "_" + year;
+				const slotTime = formattedTime;
 
-        const isSlotAvailable = docInfo.slots_booked[slotDate] && docInfo.slots_booked[slotDate].includes(slotTime) ? false : true;
+				const isSlotAvailable =
+					docInfo.slots_booked[slotDate] &&
+					docInfo.slots_booked[slotDate].includes(slotTime)
+						? false
+						: true;
 
-        if(isSlotAvailable){
-
-			timeSlots.push({
-			  datetime: new Date(currDate),
-			  time: formattedTime,
-			});
-        }
-
-
-
-
+				if (isSlotAvailable) {
+					timeSlots.push({
+						datetime: new Date(currDate),
+						time: formattedTime,
+					});
+				}
 
 				currDate.setMinutes(currDate.getMinutes() + 30);
 			}
@@ -82,8 +76,6 @@ const Appointments = () => {
 			setDocSlots((prev) => [...prev, timeSlots]);
 		}
 	};
-
-
 
 	const bookAppointment = async () => {
 		if (!token) {
@@ -100,7 +92,11 @@ const Appointments = () => {
 
 			const slotDate = day + "_" + month + "_" + year;
 
-			const { data } = await axios.post(backendUrl + "/api/user/book-appointment", { docId, slotTime,slotDate }, { headers: { token } });
+			const { data } = await axios.post(
+				backendUrl + "/api/user/book-appointment",
+				{ docId, slotTime, slotDate },
+				{ headers: { token } }
+			);
 
 			if (data.success) {
 				toast.success(data.message);
@@ -114,8 +110,6 @@ const Appointments = () => {
 			toast.error(error.message);
 		}
 	};
-
-
 
 	useEffect(() => {
 		fetchDocInfo();
@@ -241,14 +235,6 @@ const Appointments = () => {
 
 export default Appointments;
 
-
-
-
-
-
-
-
-
 // import React, { useContext, useEffect, useState } from 'react'
 // import { useNavigate, useParams } from 'react-router-dom'
 // import { AppContext } from '../context/AppContext';
@@ -318,7 +304,6 @@ export default Appointments;
 //     }
 //   }
 
-
 // //   const bookAppointment = async ()=>{
 
 // // 	if(!token){
@@ -357,26 +342,26 @@ export default Appointments;
 // 	  toast.warn("Login to book appointment");
 // 	  return navigate('/login');
 // 	}
-  
+
 // 	try {
 // 	  // Ensure docSlots and selected index are valid
 // 	  if (docSlots[slotIndex] && docSlots[slotIndex][1]) {
 // 		const date = docSlots[slotIndex][1].datetime;
 // 		console.log("Selected date:", date);
-  
+
 // 		let day = date.getDate();
 // 		let month = date.getMonth() + 1;
 // 		let year = date.getFullYear();
-  
+
 // 		const slotDate = `${day}_${month}_${year}`;
 // 		console.log("Formatted slotDate:", slotDate);
-  
+
 // 		const { data } = await axios.post(
 // 		  backendUrl + '/api/user/book-appointment',
 // 		  { docId, slotDate, slotTime },
 // 		  { headers: { token } }
 // 		);
-  
+
 // 		if (data.success) {
 // 		  toast.success(data.message);
 // 		  getDoctorsData();
@@ -393,8 +378,6 @@ export default Appointments;
 // 	  toast.error(error.message);
 // 	}
 //   };
-  
-
 
 //   useEffect(() => {
 //     console.log(docSlots);
