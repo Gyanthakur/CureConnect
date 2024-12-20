@@ -44,7 +44,7 @@ To run the project locally, follow these steps:
    npm install
    ```
 
-4. Create a .env file in the root directory and add the necessary environment variables:
+4. Create a dotenv file in the root directory and add the necessary environment variables:
 
    ```bash
    MONGO_URI=your_mongodb_connection_string
